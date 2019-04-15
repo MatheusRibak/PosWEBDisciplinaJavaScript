@@ -1,0 +1,17 @@
+<header>
+  <h1>Desenvolvimento Web com JavaScript</h1>
+</header>
+<div>
+  <aside>
+    <button (click)="signOut()">Sair do sistema</button>
+    <div>
+      <h3>Navegação</h3>
+      <a *ngFor="let page of pages" [routerLink]="[page.path]" routerLinkActive="active">
+        {{page.text}}
+      </a>
+    </div>
+  </aside>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>

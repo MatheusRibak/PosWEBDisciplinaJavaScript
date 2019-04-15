@@ -1,0 +1,26 @@
+<form [formGroup]="parentForm" (ngSubmit)="submit()">
+    <div>
+      <label for="name">Produto</label>
+      <input type="text" placeholder="Ex.: Livro Segredos do Ninja JavaScript" formControlName="name" required>
+    </div>
+    <div>
+      <label for="description">Descrição</label>
+      <textarea placeholder="Ex.: Alguns itens do sumário e quantidade de páginas" formControlName="description" required></textarea>
+    </div>
+    <div>
+      <label for="price">Preço</label>
+      <input type="text" placeholder="Ex.: 41.85" formControlName="price">
+    </div>
+    <div>
+      <label for="amount">Quantidade em estoque</label>
+      <input type="number" placeholder="Ex.: 5" formControlName="amount">
+    </div>
+    <div>
+      <label for="weight">Peso</label>
+      <input type="text" placeholder="Ex.: 699" formControlName="weight">
+      <small>Peso em gramas</small>
+    </div>
+    <div>
+      <button [disabled]="parentForm.invalid">Salvar</button>
+    </div>
+  </form>

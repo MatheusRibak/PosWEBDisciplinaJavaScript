@@ -1,0 +1,30 @@
+<form [formGroup]="parentForm" (ngSubmit)="submit()">
+  <div>
+    <label for="nomeDoLivro">Nome do Livro</label>
+    <input type="text" placeholder="Digite o nome do livro." formControlName="nomeDoLivro" required>
+  </div>
+  <div>
+    <label for="descricaoDoLivro">Descrição do Livro</label>
+    <textarea placeholder="Digite a descricao do Livro" formControlName="descricaoDoLivro" required></textarea>
+  </div>
+  <div>
+    <label for="autorDoLivro">Autor do Livro</label>
+    <input type="text" placeholder="Digite o autor do livro" formControlName="autorDoLivro">
+  </div>
+  <div>
+    <label for="precoDoLivro">Preço do Livro</label>
+    <input type="number" placeholder="Digite o Preço do Livro" formControlName="precoDoLivro">
+  </div>
+  <div>
+    <label for="anoDePublicacaoDoLivro">Ano de Publicação do Livro</label>
+    <input type="number" placeholder="Digite o Ano de Publicação do Livro" formControlName="anoDePublicacaoDoLivro">
+ 
+  </div>
+  <div>
+    <label for="editoraDoLivro">Editora do Livro</label>
+    <input type="text" placeholder="Digite a Editora do Livro" formControlName="editoraDoLivro">
+  </div>
+  <div>
+    <button [disabled]="parentForm.invalid">Salvar</button>
+  </div>
+</form>

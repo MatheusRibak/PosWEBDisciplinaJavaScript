@@ -1,0 +1,21 @@
+<div>
+  <h2>Login</h2>
+  <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" novalidate>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email" required>
+    </div>
+    <div>
+      <label for="password">Senha</label>
+      <input type="password" id="password" formControlName="password" required>
+    </div>
+    <div>
+      <button [disabled]="signInForm.invalid" type="submit">Fazer login</button>
+    </div>
+  </form>
+  <p>{{error}}</p>
+</div>
+<div>
+  <button routerLink="/auth/signup">Criar conta</button>
+</div>
+

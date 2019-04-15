@@ -1,0 +1,5 @@
+
+> web-js-api@0.0.0 start C:\Users\mathe\Desktop\PosWEB\JavaScript\PosWEBDisciplinaJavaScript
+> ts-node -r tsconfig-paths/register src/main.ts
+
+Deseja finalizar o arquivo em lotes (S/N)? 

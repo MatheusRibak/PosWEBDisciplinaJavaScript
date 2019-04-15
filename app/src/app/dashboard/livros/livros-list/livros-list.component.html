@@ -1,0 +1,35 @@
+<div>
+  <h2>Livros</h2>
+
+  <nav>
+    <a [routerLink]="['create']">Novo Livro</a>
+  </nav>
+
+  <div *ngIf="livros$ | async as livros; else loading">
+<table>
+  <tr>
+   <th>Livro</th>
+   <th>Descrição</th>
+   <th>Ano</th>
+   <th></th>
+  </tr>
+  <tr *ngFor="let l of livros">
+  <td>{{l.nomeDoLivro}}</td>
+  <td>{{l.descricaoDoLivro}}</td>
+  <td>{{l.AnoDePublicacaoDoLivro}}</td>
+  <td>aaa</td>
+
+  <td>
+    <a [routerLink]="['update', l._id]"> Editar </a>
+  <button type="button" (click)="onDelete(l._id)">Apagar</button>
+  </td>
+</tr>
+  
+</table> 
+
+</div>
+
+  <ng-template #loading>
+    Carregando Produtos
+  </ng-template>
+</div>

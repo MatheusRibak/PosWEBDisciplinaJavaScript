@@ -1,0 +1,33 @@
+<div>
+  <h2>Produtos</h2>
+
+  <nav>
+    <a [routerLink]="['create']">Novo Produto</a>
+  </nav>
+
+  <div *ngIf="products$ | async as products; else loading">
+<table>
+  <tr>
+   <th>Produto</th>
+   <th>Preço</th>
+   <th>Quantidade</th>
+   <th></th>
+  </tr>
+  <tr *ngFor="let p of products">
+  <td>{{p.name}}</td>
+  <td>{{p.price | currency}}</td>
+  <td>{{p.amount}}</td>
+  <td>
+    <a [routerLink]="['update', p._id]"> Editar </a>
+  <button type="button" (click)="onDelete(p._id)">Apagar</button>
+  </td>
+</tr>
+  
+</table> 
+
+</div>
+
+  <ng-template #loading>
+    Carregando Produtos
+  </ng-template>
+</div>
