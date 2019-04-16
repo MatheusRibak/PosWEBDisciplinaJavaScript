@@ -23,7 +23,7 @@ export class LivrosUpdateComponent implements OnInit {
   ) { 
     this.livrosForm = this.fb.group({
       _id: [],
-      nomedoLivro: [],
+      nomeDoLivro: [],
       descricaoDoLivro:  [],
       autorDoLivro:  [],
       precoDoLivro:  [],
