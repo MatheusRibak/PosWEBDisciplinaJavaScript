@@ -1,30 +1,65 @@
+<div class="col-md-12-row">
+<div class="col-md-12"> 
+
 <form [formGroup]="parentForm" (ngSubmit)="submit()">
-  <div>
-    <label for="nomeDoLivro">Nome do Livro</label>
-    <input type="text" placeholder="Digite o nome do livro." formControlName="nomeDoLivro" required>
-  </div>
-  <div>
-    <label for="descricaoDoLivro">Descrição do Livro</label>
-    <textarea placeholder="Digite a descricao do Livro" formControlName="descricaoDoLivro" required></textarea>
-  </div>
-  <div>
-    <label for="autorDoLivro">Autor do Livro</label>
-    <input type="text" placeholder="Digite o autor do livro" formControlName="autorDoLivro">
-  </div>
-  <div>
-    <label for="precoDoLivro">Preço do Livro</label>
-    <input type="number" placeholder="Digite o Preço do Livro" formControlName="precoDoLivro">
-  </div>
-  <div>
-    <label for="anoDePublicacaoDoLivro">Ano de Publicação do Livro</label>
-    <input type="number" placeholder="Digite o Ano de Publicação do Livro" formControlName="anoDePublicacaoDoLivro">
- 
-  </div>
-  <div>
-    <label for="editoraDoLivro">Editora do Livro</label>
-    <input type="text" placeholder="Digite a Editora do Livro" formControlName="editoraDoLivro">
-  </div>
-  <div>
-    <button [disabled]="parentForm.invalid">Salvar</button>
+
+
+    <div class="form-group row">
+        <label for="nomeDoLivro" class="col-sm-1 col-form-label">Nome do Livro</label>
+    
+        <div class="col-sm-11">
+            <input type="text" placeholder="Digite o nome do livro." formControlName="nomeDoLivro" required class="form-control">
+        </div>
+    </div>
+
+
+      <div class="form-group row">
+          <label for="descricaoDoLivro" class="col-sm-1 col-form-label">Descrição do Livro</label>
+      
+          <div class="col-sm-11">
+              <textarea placeholder="Digite a descricao do Livro" formControlName="descricaoDoLivro" required class="form-control"></textarea>
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="autorDoLivro" class="col-sm-1 col-form-label">Autor do Livro</label>
+      
+          <div class="col-sm-11">
+              <input type="text" placeholder="Digite o autor do livro" formControlName="autorDoLivro" class="form-control">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="precoDoLivro" class="col-sm-1 col-form-label">Preço do Livro</label>
+      
+          <div class="col-sm-11">
+              <input type="number" placeholder="Digite o Preço do Livro" formControlName="precoDoLivro" class="form-control">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="anoDePublicacaoDoLivro" class="col-sm-1 col-form-label">Ano de Publicação</label>
+      
+          <div class="col-sm-11">
+              <input type="number" placeholder="Digite o Ano de Publicação do Livro" formControlName="anoDePublicacaoDoLivro" class="form-control">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="editoraDoLivro" class="col-sm-1 col-form-label">Editora do Livro</label>
+      
+          <div class="col-sm-11">
+              <input type="text" placeholder="Digite a Editora do Livro" formControlName="editoraDoLivro" class="form-control">
+          </div>
+      </div>
+  <div class="text-center">
+    <button [disabled]="parentForm.invalid" class="btn btn-success">Salvar Livro</button>
   </div>
 </form>
+
+</div>
+
+</div>
+
+
+

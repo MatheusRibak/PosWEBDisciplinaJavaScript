@@ -1,32 +1,38 @@
-<div>
+<div class="col-md-12 row">
+  <div class="col-md-12">
   <h2>Livros</h2>
 
   <nav>
-    <a [routerLink]="['create']">Novo Livro</a>
+    <button class="btn btn-primary" [routerLink]="['create']">Cadastrar Novo Livro</button>
   </nav>
+  <br>
 
   <div *ngIf="livros$ | async as livros; else loading">
-<table>
+<table class="table table-striped">
   <tr>
-   <th>Livro</th>
+   <th>Nome</th>
    <th>Descrição</th>
-   <th>Ano</th>
-   <th></th>
+   <th>Ano de Publicação</th>
+   <th>Preço</th>
+   <th>Ações</th>
   </tr>
   <tr *ngFor="let l of livros">
   <td>{{l.nomeDoLivro}}</td>
   <td>{{l.descricaoDoLivro}}</td>
-  <td>{{l.AnoDePublicacaoDoLivro}}</td>
-  <td>aaa</td>
+  <td>{{l.anoDePublicacaoDoLivro}}</td>
+  <td>{{l.precoDoLivro | currency}}</td>
 
   <td>
-    <a [routerLink]="['update', l._id]"> Editar </a>
-  <button type="button" (click)="onDelete(l._id)">Apagar</button>
+      <button type="button" [routerLink]="['update', l._id]" class="btn btn-info"> <i class="fas fa-edit"></i>
+      Editar</button>
+      
+  <button type="button" (click)="onDelete(l._id)" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Apagar</button>
   </td>
 </tr>
   
 </table> 
 
+</div>
 </div>
 
   <ng-template #loading>

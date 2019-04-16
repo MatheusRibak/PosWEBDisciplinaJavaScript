@@ -1,14 +1,15 @@
 <header>
-  <h1>Desenvolvimento Web com JavaScript</h1>
+  <h1 class="text-center">Trabalho da Disciplina de DESENVOLVIMENTO WEB COM JAVASCRIPT</h1>
 </header>
 <div>
   <aside>
-    <button (click)="signOut()">Sair do sistema</button>
-    <div>
-      <h3>Navegação</h3>
+    
+    <div class="text-center"> 
+      <h3> Menu de Navegação</h3>
       <a *ngFor="let page of pages" [routerLink]="[page.path]" routerLinkActive="active">
         {{page.text}}
       </a>
+      <button (click)="signOut()"><i class="fas fa-sign-out-alt"></i> Sair do sistema</button>
     </div>
   </aside>
   <main>

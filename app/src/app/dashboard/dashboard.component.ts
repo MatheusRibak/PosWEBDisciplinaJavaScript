@@ -12,10 +12,10 @@ export class DashboardComponent implements OnInit {
     path: '/users',
     text: 'Usuários'
   },
-  {
-    path: '/products',
-    text: 'Produtos'
-  },
+  //{
+    //path: '/products',
+    //text: 'Produtos'
+ // },
   {
     path: '/livros',
     text: 'Livros'
